@@ -1,0 +1,24 @@
+# Best time to buy and sell stocks II 
+
+We use a variable totalProfit to store the accumulated profit and holdPrice to keep track of the price of the stock we currently hold. As we iterate through the prices, if the current price is lower than holdPrice, we update holdPrice to the current price. 
+Otherwise, we add the profit (current price minus holdPrice) to totalProfit and update holdPrice to the current price, so we are adding sum of last higher price and new higher price to total profit and this iteration will stop whenever we have a smaller 
+number as price and new smaller number will be our new buy price
+
+### Full code
+``` go 
+func maxProfit(prices []int) int {
+	totalProfit := 0
+
+	holdPrice := prices[0]
+	for i := 1; i < len(prices); i++ {
+		if prices[i] < holdPrice {
+			holdPrice = prices[i]
+		} else {
+			totalProfit += prices[i] - holdPrice
+			holdPrice = prices[i]
+		}
+	}
+	return totalProfit
+}
+
+```
