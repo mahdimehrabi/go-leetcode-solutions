@@ -5,7 +5,7 @@ In this solution, we use two pointers, bIndex (buy index) and sIndex (sell index
 
 
 ### Full code 
-```
+``` go
 func maxProfit(prices []int) int {
 	bIndex, sIndex := 0, 1
 	maxProf := 0
@@ -21,4 +21,5 @@ func maxProfit(prices []int) int {
 		sIndex++
 	}
 	return maxProf
-}```
+}
+```
