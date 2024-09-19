@@ -4,6 +4,7 @@ This solution reverses a string in place using a two-pointer approach. We initia
 
 
 ### Fullcode 
+``` go
 func reverseString(s []byte)  {
 	l := 0
 	r := len(s) - 1
@@ -13,3 +14,4 @@ func reverseString(s []byte)  {
 		r--
 	}
 }
+```
